@@ -1,0 +1,60 @@
+﻿Build started 8/6/2013 5:40:54 PM.
+     1>Project "D:\school\Programming\oop244\ass3\ass3\ass3\ass3.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt a3test.cpp ISBN.cpp ISBNPrefix.cpp Order.cpp
+         Order.cpp
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.h(19): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.h(19): error C2143: syntax error : missing ',' before '&'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.h(22): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.h(22): error C2143: syntax error : missing ',' before '&'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.h(25): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.h(25): error C2143: syntax error : missing ',' before '&'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.h(29): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.h(29): error C2143: syntax error : missing ',' before '&'
+         ISBNPrefix.cpp
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbnprefix.cpp(19): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(218) : see declaration of 'fopen'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbnprefix.cpp(37): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbnprefix.cpp(56): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbnprefix.cpp(71): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(237) : see declaration of 'fscanf'
+         ISBN.cpp
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(73): warning C4553: '==' : operator has no effect; did you intend '='?
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(156): warning C4805: '==' : unsafe mix of type 'int' and type 'bool' in operation
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(157): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(175): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(179): warning C4805: '==' : unsafe mix of type 'int' and type 'bool' in operation
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(180): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(110) : see declaration of 'strcpy'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(181): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(182): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(183): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(184): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(185): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(186): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\string.h(115) : see declaration of 'strcat'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\isbn.cpp(206): warning C4805: '==' : unsafe mix of type 'int' and type 'bool' in operation
+         a3test.cpp
+     1>d:\school\programming\oop244\ass3\ass3\ass3\a3test.cpp(715): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\a3test.cpp(719): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\a3test.cpp(725): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+     1>d:\school\programming\oop244\ass3\ass3\ass3\a3test.cpp(728): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 c:\program files\microsoft visual studio 11.0\vc\include\stdio.h(357) : see declaration of 'sprintf'
+         Generating Code...
+     1>Done Building Project "D:\school\Programming\oop244\ass3\ass3\ass3\ass3.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:11.27
