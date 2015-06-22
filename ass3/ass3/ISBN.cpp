@@ -2,6 +2,8 @@
 025 741 125
 assignment 3
 ISBNP.cpp*/
+
+
 #include<iostream>
 #include <cstdio>
 #include <cstring>
@@ -9,8 +11,7 @@ ISBNP.cpp*/
 #include <fstream>
 #include <cstdlib>
 using namespace std;
-#include"ISBNPrefix.h"
-#include"ISBN.h"
+#include "ISBN.h"
 int isValid(const char str[])
 {
    int i, a=0, b=10, rc, sum=0;
@@ -70,49 +71,24 @@ ISBN::ISBN(){
    registered=false;//safe declarition of null values and false
 }//ISBN Constructior ends
 bool ISBN::empty() const{
-	ISBNcd[0] == '\0';
-	bool registered=false;
-	return !ISBNcd[0];//return str[0];
+	if(ISBNcd[0]=='\0'){
+		return true;
+	}
+	else{
+		return false;
+	}
 }//ISBN::empty ends
-ISBN& ISBN::operator=(const ISBN& a){
-	bool flag=false;
-	if(a.ISBNcd[0]!='\0'){
-		for(int i=0;i<11;i++){
-			ISBNcd[i]=a.ISBNcd[i];
-		}
-	}
-	else{
-		flag=true;
-	}
-	if(a.area[0]!='\0'){
-		for(int i=0; i<6;i++){
-			area[i]=a.area[i];
-		}
-	}
-	else{
-		flag=true;
-	}
-	if(a.publisher[0]!='\0'){
-		for(int i=0;i<8;i++){
-			publisher[i]=a.publisher[i];
-		}
-	}
-	else{
-		flag=true;
-	}
-	if(a.title[0]!='\0'){
-		for(int i=0;i<7;i++){
-			title[i]=a.title[i];
-		}
-	}
-	else{
-		flag=true;
-	}
-	return *this;
-}
 bool operator == (const ISBN& left, const ISBN& right){
+	char temp[11], tempx[11];
+	left.toStr(temp);
+	right.toStr(tempx);
+	if(strcmp(temp,tempx)==0){
+		return true;
+	}
 	return false;
 }
+/*a function compares ISBNcode from two lsbn class reference
+if both isbn code is are equal return true else return false*/
  bool ISBN::isRegistered(const ISBNPrefix& list)
 {
    int t = 0, a = 0, p = 0;
@@ -169,12 +145,9 @@ ISBN::ISBN(const char* s2, const ISBNPrefix& list){
  bool ISBN::isRegistered() const{
 	 return registered;
  }//end of ISBN::isRegistered()
-
-
  void ISBN::toStr(char* str) const{
 	 strcpy(str,ISBNcd);//copys ISBN cd to str and return
  }//tostr ends
-
  void ISBN::toStrWithStyle(char* str) const{
 	 if(isValid(str)==true){
 		strcpy(str, area);
@@ -189,8 +162,7 @@ ISBN::ISBN(const char* s2, const ISBNPrefix& list){
 		 toStr(str);//if not valid than changes to no style mod
 	 }
  }//tostrwithstyle ends
-
- bool ISBN::read(istream& is, const ISBNPrefix& list){
+ bool ISBN::read(istream& is, const ISBNPrefix list){
 	 char temp[11];
 	 int i=0;
 	 while (i==0){
@@ -213,7 +185,6 @@ ISBN::ISBN(const char* s2, const ISBNPrefix& list){
 	 }
 	 return true;
  }//read ends
-
  void ISBN::display(ostream& os) const{
 	 char temp[13];
 	 if(registered==true){
@@ -225,3 +196,9 @@ ISBN::ISBN(const char* s2, const ISBNPrefix& list){
 	 os.width(13);
 	 os<<temp<<endl;
  }//display ends
+
+ ostream& operator<<(ostream& is, const ISBN& a){
+	 a.display(is);
+	 return is;
+ }
+ /*an function that sends ostream to display*/

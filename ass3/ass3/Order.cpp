@@ -2,24 +2,27 @@
 025 741 125
 assignment 3
 order.cpp*/
-#include<iostream>
+
+#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include <iomanip>
 #include <fstream>
 #include <cstdlib>
-using namespace std;
+
 #include"Order.h"
+using namespace std;
+
 
 Order::Order(){
 	ISBN temp;
-	isbnOrder =temp;
+	isbnOrder = temp;
 	ord=0;
 	deli=0;
 }
 /* safe empty state mode*/
 Order::Order(const ISBN& str){
-	isbnOrder =str;
+	isbnOrder = str;
 	ord=0;
 	deli=0;
 }
@@ -35,8 +38,9 @@ bool Order::has(const ISBN& str) const{
 /* compare classes and return true it matched else return false*/
 
 int Order::outstanding() const{
-	return ord	;
+	return ord;
 }
+/* a funcion returns ordered value in current object;*/
 
 bool Order::receive(istream& is){
 	bool flag=false;
@@ -62,14 +66,17 @@ bool Order::receive(istream& is){
 
 		}
 	}while(y==0 && !flag);
+	return flag;
 };
-/* return value of ord in current objecive*/
+/* receive the refrence form istream and gets value from user
+if user enters 0 quits and continuses askes untill user enter proper positivie number of deli variable
+and add with current deli variable in this obj*/
 bool Order::add(istream& is){
 	bool flag = false;
 	int x=0;
 	int y=0;
 	do{
-		cout<<"Quantity";
+		cout<<"Quantity(0 to quit)";
 		is>>x;
 		if( x <0){
 			cout<<"enter positive number please"<<endl;
@@ -87,7 +94,11 @@ bool Order::add(istream& is){
 		}
 
 	}while(y==0 && !flag);
+	return flag;
 }
+/* receive the refrence form istream and gets value from user
+if user enters 0 quits and continuses askes untill user enter proper positivie number of ord variable
+and add with current ord variable in this obj*/
 bool Order::add(int n){
 	if( n>0 && !(isbnOrder == ISBN())){
 		ord= ord+n;
@@ -95,7 +106,8 @@ bool Order::add(int n){
 	}
 	return false;
 }
-
+/*a fuction recives intiger that will going to current ord varabile in this obj
+yet it return true is isbnOrder value is in safe empty state else return false*/
 void Order::display(ostream& os) const{
  
    os << right << setw(13) << isbnOrder
@@ -103,3 +115,8 @@ void Order::display(ostream& os) const{
       << setw(11) << deli;
 }
 // DISPLAY
+
+ostream& operator<<(ostream& os, const Order& list){
+	list.display(os);
+	return os;
+}/*function send ostream to display */

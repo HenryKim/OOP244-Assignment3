@@ -2,12 +2,15 @@
 025 741 125
 assignment 3
 order.h*/
+
+#include <iostream>
 #include <cstdio>
 #include <cstring>
 #include <stdio.h>
 #include <fstream>
 using namespace std;
-#include "ISBN.h"
+#include"ISBN.h"
+
 class Order{
 	int ord;
 	int deli;
@@ -22,3 +25,5 @@ public:
 	bool receive(istream& is);
 	void display(ostream& os) const;
 };
+
+ostream& operator<<(ostream& os, const Order& list);

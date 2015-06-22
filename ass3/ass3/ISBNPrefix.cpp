@@ -2,6 +2,7 @@
 025 741 125
 assignment 3
 ISBNPrefix.cpp*/
+
 #include<iostream>
 #include <cstdio>
 #include <cstring>
@@ -25,16 +26,19 @@ ISBNPrefix::ISBNPrefix(const char* filename){
 ISBNPrefix::ISBNPrefix(const ISBNPrefix& a){
 	*this=a;
 }
+/*private copy constructor prevents copy from nowhere*/
+
 ISBNPrefix& ISBNPrefix::operator=(const ISBNPrefix& source){
 	fp=source.fp;
 	return *this;
 }
+/*private copy constructor prevents copy from nowhere*/
 bool ISBNPrefix::isRegistered(int area) const{
 	int a,ps,pl;
     if(fp!=NULL){
 		rewind(fp);
 		do{
-        fscanf(fp,"%d%d%d",&a,&pys,&pl);
+        fscanf(fp,"%d%d%d",&a,&ps,&pl);
         if (a == area){
 			return true;
 		}

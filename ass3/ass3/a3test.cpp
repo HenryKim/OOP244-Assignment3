@@ -27,7 +27,6 @@
 #include <cstring>
 using namespace std;
 
-#include "ISBNPrefix.h"
 
 #define DEBUG 1                    // set to 1 for verbose output
 #define PREFIX "prefixRanges.txt"  // file of ISBN Prefix Ranges
